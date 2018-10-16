@@ -1,0 +1,25 @@
+.banner-header{
+    margin: 0;
+    background-image: url(../../../assets/img/notebook.jpg);
+    height: 100vh;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-family: 'lobster', cursive;
+    font-size: 20px;
+    border: 2px solid #fff;
+    padding: 20px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+
+h1, h2 {
+    margin: 0;
+}
