@@ -1,0 +1,40 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="/nav">Inicio</a>
+      <a mat-list-item href="/crear-usuario">Crear Usuario</a>
+      <a mat-list-item href="/admin-usuario">Administrar Usuario</a>
+      <a mat-list-item href="/editor">Opciones</a>
+      <a mat-list-item href="#">Cerrar Sesión</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Portapapeles Beta 1</span>
+    </mat-toolbar>
+
+    <app-dashboard></app-dashboard>    
+    <!-- Aqui se añade el contenido para que este dentro del navbar creado -->
+      
+      <!--<app-table></app-table> <app-dashboard></app-dashboard>-->
+          
+       </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+ 
