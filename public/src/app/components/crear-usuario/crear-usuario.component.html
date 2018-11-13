@@ -1,0 +1,131 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="/nav">Inicio</a>
+      <a mat-list-item href="/crear-usuario">Crear Usuario</a>
+      <a mat-list-item href="/admin-usuario">Administrar Usuario</a>
+      <a mat-list-item href="/editor">Opciones</a>
+      <a mat-list-item href="#">Cerrar Sesión</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Portapapeles Beta 1</span>
+    </mat-toolbar>
+
+    <mat-toolbar>
+      <span>Crear Usuario</span>
+    </mat-toolbar>
+    
+    <mat-card>
+    
+    <form>
+    
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Correo Electronico</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+          </div>
+        </div>
+    
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
+          </div>
+        </div>
+    
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Repetir Contraseña</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Repetir Contraseña">
+          </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Año Ingreso</label>
+            <div class="col-sm-10">
+              <input type="ingreso" class="form-control" id="inputPassword3" placeholder="Año Ingreso">
+            </div>
+        </div>
+    
+    
+      <div class="form-group row">
+        <div class="col-sm-2">Permisos</div>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck1">
+            <label class="form-check-label" for="gridCheck1">
+              Gestión de Archivos
+            </label>
+          </div>
+        </div>
+      </div>
+    
+      <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck1">
+            <label class="form-check-label" for="gridCheck1">
+              Gestión de Sesiones
+            </label>
+          </div>
+        </div>
+      </div>
+    
+      <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck1">
+            <label class="form-check-label" for="gridCheck1">
+              Admin
+            </label>
+          </div>
+        </div>
+      </div>
+    
+      <div class="form-group row">
+        <div class="col-sm-10">
+            <button mat-raised-button color="primary">Guardar</button>  
+        </div>
+    
+      </div>
+    
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button mat-raised-button color="primary">Salir</button> 
+        </div>
+      </div>
+    
+    </form>
+    
+    </mat-card>
+    
+    
+    
+          
+       </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
+
